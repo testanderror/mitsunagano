@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Mitsu Nagano</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav class="navbar">
+      <div class="corner">
+      <h1 class="logo">長野 ミツ</h1>
+      <p class="small">Mitsu Nagano</p>
+       </div>
+      <ul class="nav-links" id="navLinks">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Tours</a></li>
+        <li><a href="#">Acerca</a></li>
+        <li class="ctn"><a href="#">Contacto</a></li>
+      </ul>
+      <!-- <img src="#" alt="menu" class="menu-btn" id="menuBtn" /> -->
+      <i class="ri-menu-line menu-btn" id="menuBtn"></i>
+    </nav>
+
+    <!-- Header -->
+
+    <header>
+      <div class="headerContent">
+        <h1>Tu asistencia en <span class="gold">東京</span></h1>
+        
+        <div class="line"></div>
+        <h2>Hospedaje y Turismo</h2>
+        <a href="#" class="ctn">WhatsApp <i class="ri-whatsapp-fill"></i></a>
+      </div>
+    </header>
+
+    <!-- Servicios -->
+    <div class="container">
+    <section class="tours">
+      <div class="row">
+        <div class="content-col">
+          <h1 id="service1">Servicios</h1>
+          <div id="line"></div>
+          <h2 id="service2">Hospedaje</h2>
+          <div class="line"></div>
+          <h2 id="service3">Custodia de Equipaje</h2>
+          <div class="line"></div>
+          <h2 id="service4">Toures Guíados</h2>
+          <div class="line"></div>
+          <p></p>
+          <a href="#" class="ctn">Agendar</a>
+        </div>
+
+        <div class="content-col">
+  
+        </div>
+
+       
+        </div>
+      </div>
+    </section>
+  </div>
+
+    <!-- Agenda -->
+    <hr />
+
+    <section class="wrapper">
+      <h1>Agenda</h1>
+      <div class="calendar">
+        <div class="month">
+          <button onclick="previousMonth()">
+            <i class="ri-arrow-left-line"></i>
+          </button>
+          <h2 id="monthYear">May 2024</h2>
+          <button onclick="nextMonth()">
+            <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+        <div class="day-labels">
+          <div class="day-label">Sun</div>
+          <div class="day-label">Mon</div>
+          <div class="day-label">Tue</div>
+          <div class="day-label">Wed</div>
+          <div class="day-label">Thu</div>
+          <div class="day-label">Fri</div>
+          <div class="day-label">Sat</div>
+        </div>
+        <div class="days"></div>
+      </div>
+    </section>
+    <hr />
+
+    <!-- <section class="events">
+      <div class="title">
+        <h1>Datos</h1>
+        <div class="line"></div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <img class="hero-img" src="./imgs/hachiko.jpeg" alt="" />
+          <h4>Estatua de Hachiko y el profesor</h4>
+
+          <p>
+            Mucha gente opta por ir a la tradicional estatua de Hachiko ubicada
+            en Shibuya pero
+            <i><a href="#" class="continueReading">seguir leyendo.</a></i>
+            <span class="hiddenText"
+              >no consideran visitar este excelente lugar.
+              <i><a href="#" class="stopReading">leer menos.</a></i></span
+            >
+          </p>
+
+          <a
+            href="https://www.google.com/maps?daddr=35.716388,139.758882&dirflg=r"
+            ><i class="ri-map-pin-line"></i
+          ></a>
+
+          <a href="#" class="ctn">Saber mas</a>
+        </div>
+
+        <div class="col">
+          <img class="hero-img" src="./imgs/hachiko2.jpeg" alt="" />
+          <h4>Hachiko embalsamado.</h4>
+          <p>
+            Sabías que Hachiko se encuentra embalsamado en el museo de XXX, esta
+            también se convierte en una atracción que debes visitar
+            <i>... <a href="#" class="continueReading">seguir leyendo.</a></i>
+          </p>
+          <a href="#" class="ctn">Saber mas</a>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Explore -->
+
+    <section class="explore">
+      <div class="explore-content">
+        <h1>Explora Tokyo</h1>
+        <div class="line"></div>
+        <p>
+          Hospedate conmigo y dejame mostrarte por todo lo que Tokyo tiene por
+          ofrecer.
+        </p>
+      </div>
+    </section>
+
+    <!-- Tours -->
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Numero + Calle, Ciudad, Tokyo, Japon | numero telefonico | Email:
+        contacto@email.com
+      </p>
+      <p>Copyright &copy; 2024 Todos los derechos reservados</p>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

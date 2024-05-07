@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  font-family: 'Open Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+  color-scheme: light dark;
+  color: black;
+
+  --my-color: #fc036b;
+
+  }
+
+  /* General */ 
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body, html{
+    overflow-x: hidden;
+  }
+
+  .ctn {
+    padding: 8px;
+    background: var(--my-color);
+    color: whitesmoke;
+    border-radius: 15px;
+    padding: 15px 40px;
+  }
+
+  /* Links */ 
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover{
+    color: orange;
+  }
+
+  .gold {
+    font-size: 10vmin;
+    color: #1a2a5a;
+  }
+
+
+
+  /* Header */ 
+
+  header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./imgs/tokyobg1.jpeg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+  }
+
+  .headerContent{
+    margin-bottom: 150px;
+    text-align: center;
+  }
+
+  .line{
+    height: 4px;
+    width: 150px;
+    background: var(--my-color);
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+
+  .headerContent h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #fff
+
+  }
+
+  .headerContent h2{
+    color: #1a2a5a;
+  }
+ 
+  h1#service1 {
+    font-size: 12vmin;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  h2#service2, h2#service3, h2#service4 {
+    color: white;
+  }
+
+  .headerContent a{
+    position: relative;
+    top: 30px;
+  }
+
+  /* Header Ends */
+
+  /* Navbar */
+
+  .navbar {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: whitesmoke;
+    
+  }
+
+  ul{
+    list-style: none;
+  }
+
+  .nav-links{
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links li{
+    margin: 0 30px;
+  }
+
+  .active{
+    color: var(--my-color);
+    font-weight: bold;
+  }
+
+  .menu-btn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    font-size: 2rem;
+    display: none;
+  }
+
+  /* Navbar Ends */
+
+
+/* Calendar Starts */
+.month {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.calendar {
+  max-width: 400px;
+  margin: 0 auto;
+  
+  padding: 20px;
+}
+
+.day-labels {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+}
+
+.day-label {
+  padding: 5px;
+}
+
+.days {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.day {
+  text-align: center;
+  padding: 10px;
+  border: 0.5px snow #ddd;
+}
+
+.unavailable {
+  background-color: #ffcccc; /* Light red background */
+  border-radius: 15%; /* Circle shape */
+}
+
+.wrapper {
+  margin: 40px auto;
+  margin-bottom: 20px;
+}
+
+.calendar button{
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--extra-light);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .wrapper h1{
+    position: relative;
+    top: -10px;
+    left: 0px;
+  }
+
+  .day .day-label{
+    transform: scale(0.8);
+  }
+/* Calendar Ends */
+
+  
+
+  
+
+  /* CSS to change color of SVG image */
+img#menu-btn {
+  filter: invert(100%) grayscale(100%) brightness(0) contrast(100%);
+}
+
+  /* Media Queries and Mobile Screen */
+
+
+  @media only screen and (max-width: 850px) {
+
+    header {
+      background-position: left;
+    }
+
+    .menu-btn{
+      position: absolute;
+      transform: scale(1.1);
+      top: 23px;
+      right: 30px;
+      width: 40px;
+      cursor: pointer;
+      display: block;
+    }
+
+    .navbar{
+      padding: 0;
+    }
+
+    .logo{
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      display: block;
+    }
+
+    .small{
+      font-size: 2vmin;
+      position: absolute;
+      top: 60px;
+      left: 30px;
+      display: block;
+    }
+
+    .nav-links{
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+      background: #1a2a5a;
+      margin-top: -900px;
+      transition: all 0.5s ease;
+    }
+
+    .mobile-menu{
+      margin-top: 0px;
+      border-bottom-right-radius: 30%;
+      
+    }
+
+    .nav-links li{
+      margin: 30px auto;
+    }
+
+    .events {
+      margin-bottom: 10px;
+    }
+
+    .events .row{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .row .col{
+      margin: 30px auto;
+    }
+
+    .col img{
+      max-width: 90%;
+    }
+
+    .explore-content{
+      width: 100%;
+    }
+
+    .tours .col{
+      width: 100%;
+    }
+
+    .image-gallery{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .image-gallery img{
+      width: 100%;
+    }
+
+    .footer{
+      padding: 10px;
+    }
+
+    .tours a{
+      font-size: 50%;
+    }
+
+    .explore {
+      margin-top: 0px;
+    }
+
+  }
+
+  /* Events */
+
+  section{
+    width: 80%;
+    margin: 0px auto;
+    
+  }
+  
+  .events h1{
+    text-align: left;
+    font-size: 10vmin;
+  }
+  
+
+  .events .title .line{
+    position: relative;
+    left: -80px;
+  }
+
+  .row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    
+  }
+
+  .row .col{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .events .row{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items:center;
+  }
+
+.serviceInfo{
+  justify-content: flex-end;
+  transition: linear;
+  font-size: 4vmin;
+  color: white;
+}
+
+
+
+/* CSS to style the second .content-col */
+.row > .content-col:nth-child(2) {
+  /* Specify styles for the second .content-col */
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Add more styles as needed */
+}
+
+
+  .events .row h4 {
+    font-size: 3vmin;
+    color: #484872;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .events p {
+    color: #54545c;
+    padding: 0 5px;
+    justify-content:space-evenly;
+  }
+
+  .events .ctn{
+    margin-top: 30px;
+  }
+
+  .hero-img{
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+
+  
+
+  /* Explore Component */
+
+  .explore{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./imgs/tokyobg1.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+  }
+
+  .explore{
+    margin-bottom: 0px;
+  }
+
+  .explore-content{
+    width: 60%;
+    padding: 50px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .explore-content h1{
+    font-size: 7vmin;
+  }
+
+  .explore-content .line{
+    margin-bottom: 50px;
+  }
+
+  .explore-content p{
+    color: white;
+  }
+
+  .explore-content .ctn{
+    margin-top: 40px;
+  }
+  
+  .enora{
+    width: 400px;
+  }
+
+  .content-col{
+  width: 50%;
+  }
+
+  .image-col{
+  width: 50%;
+  }
+
+  .container{
+    background: url('./imgs/tokyobg2.jpeg');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.1); 
+    height: 70vh;
+  }
+
+  .container::before{
+    opacity: 0.33;
+  }
+
+  .tours .image-gallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+    width: 100%;
+    align-items: center;
+  }
+
+  .tours .ctn{
+    margin-top: 50px;
+  }
+
+  .image-gallery img{
+    max-width: 300px;
+    margin: 10px;
+  }
+
+  .content-col h1{
+    font-size: 6vmin;
+    color:#ddd;
+  }
+
+  .content-col .line{
+    margin-left: -1px;
+  }
+
+  .content-col p{
+    color:#ddd;
+    padding: 0;
+    margin: 30px auto;
+  }
+
+footer {
+  width: 100%;
+  min-height: 100px;
+  padding: 20px 80px;
+  margin: 0;
+  text-align: center;
+  background-color: #1a2a5a;
+}
+
+footer p{
+  font-size: 0.7rem;
+  color: whitesmoke;
+  margin: 20px auto;
+  padding: 20px auto;
+}
+
+/* Animations */
+
+img {
+  max-width: 400px;
+  transition: transform .3s ease;
+}
+
+img:hover{
+  transform: scale(1.1);
+}
+
+.nagano:hover{
+  transform: scale(2);
+}
+
+.ctn:hover{
+  background: whitesmoke;
+  color: var(--my-color);
+}
